@@ -1,8 +1,41 @@
-body{
-background-color: blue;
+html {
+    box-sizing: border-box;
 }
 
-button{
-    background-color: teal;
-    color:white;
+*,
+*:before,
+*:after {
+box-sizing: inherit;
 }
+
+body{
+background-color: rgb(250, 212, 208);
+.bebas-neue-regular {
+  font-family: "Bebas Neue", serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
+
+
+h1{
+  text-align: center;
+  color: rgb(43, 90, 245);
+}
+
+
+  .form-control-dark {
+    border-color: var(--bs-gray);
+  }
+  
+header{
+  padding: 20px;
+  background-color: #333;
+  border: 10px solid;
+  color: #333;
+ 
+
+}
+ footer{
+  text-align: center;
+ }
