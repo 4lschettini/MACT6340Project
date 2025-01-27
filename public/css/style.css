@@ -8,23 +8,28 @@ html {
 box-sizing: inherit;
 }
 
+
 body {
 background-color: rgb(250, 212, 208);
+
 .bebas-neue-regular {
   font-family: "Bebas Neue", serif;
   font-weight: 400;
   font-style: normal;
 }
-
-
+}
 
 h1{
   text-align: center;
-  color: rgb(43, 90, 245);
+  color: rgb(255, 255, 255);
 }
 h2{
   text-align: center;
   color: rgb(255, 255, 255);
+  
+}
+h3{
+  color: rgb(43, 90, 245);
 }
 
 
@@ -38,9 +43,14 @@ header{
   border: 10px solid;
   color: #333;
  
-
 }
+
+.spacer {
+  min-height: 80px;
+}
+
  footer{
+  padding: 20px;
   text-align: center;
  }
 

@@ -38,7 +38,7 @@
             console.log("Message:" + msg);
         }
 
-console.log(obj);
+
 
 
     })();
