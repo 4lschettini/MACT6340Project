@@ -16,7 +16,6 @@ font-optical-sizing: auto;
 font-weight: 200;
 font-style: normal;
 
-
 }
 h1 {
   text-align: center;
@@ -30,6 +29,7 @@ h2 {
   text-align: center;
   color: rgb(255, 255, 255);
   font-family: "Montserrat", serif;
+  
 }
 
 h3 {
@@ -39,6 +39,10 @@ h3 {
   font-family: "Bebas Neue", sans-serif;
 }
 
+img{
+  max-width: 100%;
+  height: auto;
+}
 
   .form-control-dark {
     border-color: var(--bs-gray);
