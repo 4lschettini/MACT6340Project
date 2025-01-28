@@ -11,25 +11,32 @@ box-sizing: inherit;
 
 body {
 background-color: rgb(250, 212, 208);
+font-family: "Montserrat", serif;
+font-optical-sizing: auto;
+font-weight: 200;
+font-style: normal;
 
-.bebas-neue-regular {
-  font-family: "Bebas Neue", serif;
-  font-weight: 400;
-  font-style: normal;
-}
-}
 
-h1{
+}
+h1 {
   text-align: center;
   color: rgb(255, 255, 255);
+  font-family: "Montserrat", serif;
+  font-weight: 600;
+  font-style: semi-bold;
 }
-h2{
+
+h2 {
   text-align: center;
   color: rgb(255, 255, 255);
-  
+  font-family: "Montserrat", serif;
 }
-h3{
+
+h3 {
+  text-align: center;
   color: rgb(43, 90, 245);
+  font-size:45px;
+  font-family: "Bebas Neue", sans-serif;
 }
 
 
@@ -52,5 +59,6 @@ header{
  footer{
   padding: 20px;
   text-align: center;
+  
  }
 
