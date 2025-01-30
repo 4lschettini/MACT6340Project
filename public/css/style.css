@@ -5,7 +5,7 @@ html {
 *,
 *:before,
 *:after {
-box-sizing: inherit;
+box-sizing: inherit;s
 }
 
 
@@ -19,30 +19,32 @@ font-style: normal;
 }
 h1 {
   text-align: center;
-  color: rgb(255, 255, 255);
-  font-family: "Montserrat", serif;
+  color: rgb(226, 5, 5);
+  font-family: "Raleway", serif;
   font-weight: 600;
   font-style: semi-bold;
 }
 
 h2 {
   text-align: center;
-  color: rgb(255, 255, 255);
-  font-family: "Montserrat", serif;
-  
+  color: rgb(226, 5, 5);
+  font-family: "Raleway", serif;
+}
+
+#featuredImage {
+  width: 100%; /* Or set a fixed width */
+  max-width: 1600px; /* Adjust as needed */
 }
 
 h3 {
   text-align: center;
-  color: rgb(43, 90, 245);
-  font-size:45px;
+  /* color: rgb(38, 83, 231); */
+  color: #050655;
+  font-size:80px;
   font-family: "Bebas Neue", sans-serif;
 }
 
-img{
-  max-width: 100%;
-  height: auto;
-}
+
 
   .form-control-dark {
     border-color: var(--bs-gray);
@@ -50,19 +52,21 @@ img{
   
 header{
   padding: 20px;
-  background-color: #333;
+  /* background-color: #333; */
+  background-color: #020345;
   border: 10px solid;
-  color: #333;
- 
+  /* color: #333; */
+  color: #020345;
 }
 
 .spacer {
   min-height: 80px;
 }
 
+
  footer{
   padding: 20px;
   text-align: center;
-  
+  color: rgb(255, 255, 255);
  }
 
