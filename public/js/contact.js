@@ -32,7 +32,9 @@
                ${ document.querySelector("#contact-email-addr").value}`, 
                   
             };
-            console.log("First name:" + firstName);
+            
+            
+                    console.log("First name:" + firstName);
             console.log("Last name:" + lastName);
             console.log("Email:" + email);
             console.log("Message:" + msg);

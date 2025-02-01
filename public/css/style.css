@@ -5,9 +5,8 @@ html {
 *,
 *:before,
 *:after {
-box-sizing: inherit;s
+box-sizing: inherit;
 }
-
 
 body {
 background-color: rgb(250, 212, 208);
@@ -16,7 +15,7 @@ font-optical-sizing: auto;
 font-weight: 200;
 font-style: normal;
 
-}
+
 h1 {
   text-align: center;
   color: rgb(226, 5, 5);
@@ -44,8 +43,6 @@ h3 {
   font-family: "Bebas Neue", sans-serif;
 }
 
-
-
   .form-control-dark {
     border-color: var(--bs-gray);
   }
@@ -69,4 +66,22 @@ header{
   text-align: center;
   color: rgb(255, 255, 255);
  }
+ @media (max-width: 768px) {
+    h1 {
+      font-size: 8vw; /* Larger font size for smaller screens */
+    }
 
+    h2 {
+      font-size: 6vw; /* Larger font size for smaller screens */
+    }
+
+    h3 {
+      font-size: 8vw; /* Larger font size for smaller screens */
+    }
+
+    h4 {
+      font-size: 4vw; /* Larger font size for smaller screens */
+    }
+  }
+
+}
