@@ -8,6 +8,7 @@ html {
 box-sizing: inherit;
 }
 
+
 body {
 background-color: rgb(250, 212, 208);
 font-family: "Montserrat", serif;
@@ -39,8 +40,14 @@ h3 {
   text-align: center;
   /* color: rgb(38, 83, 231); */
   color: #050655;
-  font-size:80px;
+  font-size:70px;
   font-family: "Bebas Neue", sans-serif;
+}
+h4{
+text-align: center;
+  color: rgb(255, 254, 254);
+  font-family: "Raleway", serif;
+
 }
 
   .form-control-dark {
@@ -59,7 +66,6 @@ header{
 .spacer {
   min-height: 80px;
 }
-
 
  footer{
   padding: 20px;
@@ -83,5 +89,7 @@ header{
       font-size: 4vw; /* Larger font size for smaller screens */
     }
   }
+
+ 
 
 }
