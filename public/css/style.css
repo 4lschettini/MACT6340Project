@@ -66,6 +66,44 @@ header{
 .spacer {
   min-height: 80px;
 }
+.color-band {
+  background-color: #020345; 
+  color: #fbfbfc;
+  text-align: center;
+  padding: 100px 0;
+  font-size: 1.2em;
+}
+color-band-content {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 50px; /* Space between image and description */
+}
+
+.color-band img {
+  max-width: 200px; 
+  height: auto;
+
+}
+
+.description {
+  max-width: 400px;
+}
+
+.description h2 {
+  margin-top: 0;
+}
+
+@media (max-width: 600px) {
+  .color-band-content {
+    flex-direction: column; 
+    text-align: center;
+  }
+
+  .description {
+    max-width: 100%;
+  }
+}
 
  footer{
   padding: 20px;
@@ -74,19 +112,19 @@ header{
  }
  @media (max-width: 768px) {
     h1 {
-      font-size: 8vw; /* Larger font size for smaller screens */
+      font-size: 8vw; 
     }
 
     h2 {
-      font-size: 6vw; /* Larger font size for smaller screens */
+      font-size: 6vw; 
     }
 
     h3 {
-      font-size: 8vw; /* Larger font size for smaller screens */
+      font-size: 8vw; 
     }
 
     h4 {
-      font-size: 4vw; /* Larger font size for smaller screens */
+      font-size: 4vw; 
     }
   }
 
