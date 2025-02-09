@@ -2,16 +2,20 @@ import express from"express";
 import dotenv from "dotenv";
 import *as utils from "./utils/utils.js";
 dotenv.config();
-
+let data = ["Project 1", "Project 2", "Project 3"];
 
 const app = express();
 const port = 3000;
+app.set("view engine"), "ejs);"
 app.use(express.json());
-app.use(express.static('public'));
+app.use(express.static("public"));
 
-// app.get('/', (req, res) => {
-//   res.send('Hello World!')
-// })
+// app.get("/", (req, res) => {
+//   res.send("Hello World!")
+// });
+app.get("/", (req, res) => {
+  res.render("index.ejs")
+});
 
 app.post('/mail', async (req, res) => {
   await utils

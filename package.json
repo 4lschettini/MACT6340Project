@@ -21,6 +21,7 @@
   "homepage": "https://github.com/4lschettini/MACT6340Project#readme",
   "dependencies": {
     "dotenv": "^16.4.7",
+    "ejs": "^3.1.10",
     "express": "^4.21.2",
     "nodemailer": "^6.10.0"
   },
