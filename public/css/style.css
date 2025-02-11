@@ -56,10 +56,12 @@ text-align: center;
   
 header{
   padding: 20px;
-  /* background-color: #333; */
   background-color: #020345;
+  width: 100%;
+  left: 0px;
+  margin-left: 0;
+  height:100px;
   border: 10px solid;
-  /* color: #333; */
   color: #020345;
 }
 
@@ -125,9 +127,17 @@ color-band-content {
 
     h4 {
       font-size: 4vw; 
+       /* text-shadow: 2px 2px #020345; */
     }
   }
 
- 
+ #splash {
+  min-height: 10px;
+  /* background: url("/images/DeepDreamTwoPaintings.jpeg"); */
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  background-attachment: fixed;
+}
 
 }
