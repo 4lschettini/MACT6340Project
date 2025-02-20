@@ -1,5 +1,6 @@
 
-show databases;
+select * from projects;
+
 
 
 
