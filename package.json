@@ -20,6 +20,7 @@
   },
   "homepage": "https://github.com/4lschettini/MACT6340Project#readme",
   "dependencies": {
+    "cors": "^2.8.5",
     "dotenv": "^16.4.7",
     "ejs": "^3.1.10",
     "express": "^4.21.2",
@@ -28,5 +29,6 @@
   },
   "devDependencies": {
     "nodemon": "^3.1.9"
-  }
+  },
+  "keywords": []
 }
