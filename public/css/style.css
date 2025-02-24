@@ -130,6 +130,9 @@ color-band-content {
        /* text-shadow: 2px 2px #020345; */
     }
   }
+projectCard{
+  color: rgb(250, 212, 208);
+}
 
  #splash {
   min-height: 10px;
