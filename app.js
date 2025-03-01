@@ -6,7 +6,7 @@ import * as db from "./utils/database.js";
 let data = ["Project 1", "Project 2", "Project 3"];
 import cors from "cors";
 let projects = [];
-
+console.log(projects);
 const app = express();
 const port = 3000;
 app.use(cors());
