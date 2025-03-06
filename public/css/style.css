@@ -47,9 +47,17 @@ h4{
 text-align: center;
   color: rgb(250, 250, 251);
     font-size:30px;
-  font-family: "Montserrat", serif;
+  font-family: "Raleway", sans-serif;
 
 }
+
+h5 {
+  text-align: center;
+  color: #050655;
+   font-size:30px;
+  font-family: "Raleway", serif;
+}
+
 
   .form-control-dark {
     border-color: var(--bs-gray);
@@ -76,8 +84,9 @@ header{
   padding: 100px 0;
   font-size: 1.2em;
 }
-color-band-content {
+.color-band-content {
   display: flex;
+  flex-direction: column;
   align-items: center;
   justify-content: center;
   gap: 50px; /* Space between image and description */
@@ -131,7 +140,7 @@ color-band-content {
        /* text-shadow: 2px 2px #020345; */
     }
   }
-projectCard{
+.projectCard {
   color: rgb(250, 212, 208);
 }
 
