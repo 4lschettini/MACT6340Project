@@ -3,10 +3,12 @@ import dotenv from "dotenv";
 import * as utils from "./utils/utils.js";
 dotenv.config();
 import * as db from "./utils/database.js";
+let data = ["Project 1", "Project 2", "Project 3"];
 import cors from "cors";
 
-let projects = []; // Default to an empty array
+let projects = [];
 
+console.log(projects);
 const app = express();
 const port = 3000;
 app.use(cors());
@@ -15,38 +17,28 @@ app.use(express.json());
 app.use(express.static("public"));
 
 app.get("/", async (req, res, next) => {
-  try {
-    console.log("Attempting to connect to the database...");
-    await db.connect();
-    console.log("Database connected successfully.");
-    projects = await db.getAllProjects();
-    console.log("Projects fetched:", projects);
-    if (projects.length === 0) {
-      throw new Error("No projects found in the database.");
-    }
-    let featuredRand = Math.floor(Math.random() * projects.length);
-    res.render("index.ejs", { featuredProject: projects[featuredRand] });
-  } catch (err) {
-    console.error("Error in / route:", err);
-    next(err);
-  }
+  await db
+    .connect()
+    .then(async () => {
+      // query the databse for project records
+      projects = await db.getAllProjects();
+      console.log(projects);
+      let featuredRand = Math.floor(Math.random() * projects.length);
+      res.render("index.ejs", { featuredProject: projects[featuredRand] });
+    })
+    .catch(next);
 });
 
 app.get("/projects", (req, res) => {
   res.render("projects.ejs", { projectArray: projects });
 });
 
-app.get("/project/:id", (req, res, next) => {
-  try {
-    let id = parseInt(req.params.id, 10);
-    if (isNaN(id) || id < 1 || id > projects.length) {
-      throw new Error("No project with that ID");
-    }
-    res.render("project.ejs", { project: projects[id - 1], which: id });
-  } catch (err) {
-    console.error("Error in /project/:id route:", err);
-    next(err);
+app.get("/project/:id", (req, res) => {
+  let id = req.params.id;
+  if (id > data.length) {
+    throw new Error("No project with that ID");
   }
+  res.render("project.ejs", {project: projects[id - 1], which: id });
 });
 
 app.get("/contact", (req, res) => {
@@ -54,19 +46,21 @@ app.get("/contact", (req, res) => {
 });
 
 app.post("/mail", async (req, res) => {
-  try {
-    await utils.sendMessage(req.body.sub, req.body.txt);
-    res.send({ result: "success" });
-  } catch (err) {
-    console.error("Error sending mail:", err);
-    res.send({ result: "failure" });
-  }
+  await utils
+    .sendMessage(req.body.sub, req.body.txt)
+    .then(() => {
+      res.send({ result: "success" });
+    })
+    .catch(() => {
+      res.send({ result: "failure" });
+    });
 });
 
-app.use((err, req, res, next) => {
-  console.error("Unhandled error:", err);
-  let msg = err.message;
-  if (msg !== "No project with that ID") {
+app.use(async (err, req, res, next) => {
+  console.log(err);
+  let msg;
+  msg = err.message;
+  if (msg != "No project with that ID") {
     msg =
       "There was an internal error. Apologies. We are working on cleaning up the mess.";
   }
